@@ -47,6 +47,9 @@ function getProId(){
                 nextGoodsUrl(goodsUrl)
             }
         })
+        .catch(function (reason) {
+            console.log('getProId失败：' + reason);
+        });
     }
 }
 function nextGoodsUrl(url){
@@ -63,6 +66,9 @@ function nextGoodsUrl(url){
             nextGoodsUrl(url)
         }
     })
+    .catch(function (reason) {
+        console.log('nextGoodsUrl失败：' + reason);
+    });
 }
 
 function getIpId(){
@@ -83,6 +89,9 @@ function getIpId(){
                 nextUrl(i,ip_num,seq_num)          
             }
         })
+        .catch(function (reason) {
+            console.log('getIpId失败：' + reason);
+        });
     }
 }
 function nextUrl(num,ip_num,seq_num){
@@ -104,6 +113,9 @@ function nextUrl(num,ip_num,seq_num){
             }
         }
     })
+    .catch(function (reason) {
+        console.log('nextUrl失败：' + reason);
+    });
 }
 
 function getIdUrl(url,id){
@@ -126,6 +138,9 @@ function getIdUrl(url,id){
             getIdUrl(url,id)
         }
     })
+    .catch(function (reason) {
+        console.log('getIdUrl失败：' + reason);
+    });
 }
 
 function getProdDetail(id){
@@ -195,6 +210,9 @@ function getProdDetail(id){
             console.log(time)
         })
     })
+    .catch(function (reason) {
+        console.log('getProdDetail失败：' + reason);
+    });
 }
 getProId()
 getIpId()
